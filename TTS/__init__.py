@@ -33,7 +33,7 @@ if is_pytorch_at_least_2_4():
         [
             type(np.float64(1.0)),  # Using actual scalar type instead of np._core.multiarray.scalar
             np.dtype,
-            np.dtypes.Float64DType,
+            np.dtype('float64'),  # Compatible with numpy < 2.0
             _codecs.encode,  # TODO: safe by default from Pytorch 2.5
         ]
     )
